@@ -1,0 +1,37 @@
+<section>
+
+  <div class="container">
+    <button type="button" class="btn btn-primary m-3" routerLink="add">Add User</button>
+
+    <table class="table table-bordered">
+      <thead>
+        <tr>
+          <th>uId</th>
+          <th>name</th>
+          <th>lastName</th>
+          <th>gender</th>
+          <th>pId</th>
+          <th>mobNum</th>
+          <th>actualAddress</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of userData">
+          <td>{{user.uId}}</td>
+          <td>{{user.name}}</td>
+          <td>{{user.lastName}}</td>
+          <td>{{user.gender}}</td>
+          <td>{{user.pId}}</td>
+          <td>{{user.mobNum}}</td>
+          <td>{{user.actualAddress}}</td>
+          <td class="action">
+            <span class="mx-2">edit</span>
+            <span (click)="deleteUser(user)">delete</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</section>

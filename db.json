@@ -1,0 +1,26 @@
+{
+  "Users": [
+    {
+      "uId": 1,
+      "name": "omari",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "pId": 60001152204,
+      "mobNum": 598480481,
+      "legalAddress": {
+        "actualCountry": "tbilisi"
+      },
+      "actualAddress": null
+    },
+    {
+      "uId": 2,
+      "name": "giorgi",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "pId": 60001152305,
+      "mobNum": 598480484,
+      "legalAddress": null,
+      "actualAddress": null
+    }
+  ]
+}
