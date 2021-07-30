@@ -3,6 +3,7 @@ section {
   height: 100%;
   .table thead th {
     border: none !important;
+    flex: 1 1 150px;
   }
 
   table {
@@ -33,6 +34,7 @@ section {
       }
       td {
         border: none !important;
+        flex: 1 1 150px;
       }
 
       .action {

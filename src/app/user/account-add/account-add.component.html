@@ -1,10 +1,8 @@
 <main>
   <div class="container ">
+  <h3 class="m-3">ანგარიშის დამატება</h3>
+
     <form [formGroup]="accountForm">
-      <div class="input-cont">
-        <label class="my-3">uId</label>
-        <input type="text" placeholder="Enter uId" formControlName="uId" required>
-      </div>
 
       <div class="row mb-3">
         <label for="accountType" class="col-sm-2 col-form-label">accountType</label>
@@ -44,12 +42,7 @@
     </form>
     <div class="cont">
       <button type="button" class="btn btn-primary m-3" (click)='addAccount()'
-      [disabled]="accountForm.invalid">Add User</button>
-      <ng-container *ngIf="accountForm.invalid">
-        <span class="text-danger">
-          ყველა ველის შევსება სავალდებულოა
-        </span>
-      </ng-container>
+      [disabled]="accountForm.invalid">Add Account</button>
     </div>
   </div>
 </main>

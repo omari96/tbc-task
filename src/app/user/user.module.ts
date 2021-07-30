@@ -7,7 +7,6 @@ import { AddUserComponent } from './add-user/add-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { FormViewComponent } from './shared/form-view/form-view.component';
 import { AccountListComponent } from './account-list/account-list.component';
-import { AccountEditComponent } from './account-edit/account-edit.component';
 import { AccountAddComponent } from './account-add/account-add.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2OrderModule } from 'ng2-order-pipe';
@@ -20,7 +19,6 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     EditUserComponent,
     FormViewComponent,
     AccountListComponent,
-    AccountEditComponent,
     AccountAddComponent
   ],
   imports: [

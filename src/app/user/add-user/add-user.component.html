@@ -1,5 +1,7 @@
 <main>
-  <div class="container ">
+  <div class="container py-2">
+    <h3 class="m-4">მომხმარებლის დამატება</h3>
+
     <app-form-view [formGroup]="formGroup"></app-form-view>
     <button type="button" class="btn btn-primary m-3" (click)='addUser()'  [disabled]="formGroup.invalid">Add User</button>
   </div>

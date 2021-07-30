@@ -3,7 +3,6 @@
     <table class="table ">
       <thead>
         <tr>
-          <th>uId</th>
           <th>accountType</th>
           <th>currency</th>
           <th>accountStatus</th>
@@ -11,8 +10,7 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let account of accountData" [routerLink]="['accountDetail', account.id]">
-          <td>{{account.uId}}</td>
+        <tr *ngFor="let account of accountData">
           <td>{{account.accountType}}</td>
           <td>{{account.currency}}</td>
           <td>{{account.accountStatus}}</td>

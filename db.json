@@ -181,9 +181,9 @@
     },
     {
       "uId": "1",
-      "accountType": "",
-      "currency": "",
-      "accountStatus": "",
+      "accountType": "Accumulator",
+      "currency": "USD",
+      "accountStatus": "Active",
       "id": 5
     }
   ]
