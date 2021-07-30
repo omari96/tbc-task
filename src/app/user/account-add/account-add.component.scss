@@ -1,0 +1,55 @@
+main {
+  background: #f6f7f8;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  form {
+    .input-cont{
+      display: flex;
+      flex-direction: column;
+      label {
+        color: black;
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      input {
+        width: 100%;
+        max-width: 130px;
+        height: 50px;
+        border: none;
+        outline: none;
+        background-color: white;
+        font-size: 15px;
+        color: black;
+        margin-bottom: 15px;
+        border-radius: 5px;
+        padding-left: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        &.has-error {
+          border: 1px solid red;
+        }
+      }
+    }
+
+    .row {
+      display: flex;
+      flex-direction: column;
+
+      select {
+        border-radius: 5px;
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        height: 50px;
+        padding: 10px;
+        }
+    }
+  }
+  .cont{
+    display: flex;
+    flex-direction: column;
+
+    button{
+      max-width: 130px;
+    }
+  }
+}

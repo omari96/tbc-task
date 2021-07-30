@@ -1,26 +1,190 @@
 {
   "Users": [
     {
-      "uId": 1,
-      "name": "omari",
+      "firstName": "omari",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "mobNum": 598480481,
+      "pId": 60001152204,
+      "legalAddressCountry": "avstria",
+      "legalAddressCity": "tbilisi",
+      "legalAddressAddress": "chavchavadze",
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "tbilisi",
+      "actualAddressAddress": "cincadze",
+      "id": 1
+    },
+    {
+      "id": 2,
+      "firstName": "giorgi",
       "lastName": "nutsubidze",
       "gender": "men",
       "pId": 60001152204,
       "mobNum": 598480481,
-      "legalAddress": {
-        "actualCountry": "tbilisi"
-      },
-      "actualAddress": null
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "kutasi",
+      "actualAddressaddress": "chavchavadze N22",
+      "legalAddressCountry": "georgia",
+      "legalAddressCity": "tbilisi",
+      "legalAddressaddress": "cincadze N22"
     },
     {
-      "uId": 2,
-      "name": "giorgi",
+      "firstName": "vanda",
+      "lastName": "bodokia",
+      "gender": "women",
+      "mobNum": "598480481",
+      "pId": "60001152205",
+      "legalAddressCountry": "parizi",
+      "legalAddressCity": "kutaisi",
+      "legalAddressAddress": "diasjdias",
+      "actualAddressCountry": "avstria",
+      "actualAddressCity": "kutaisi",
+      "actualAddressAddress": "diasjdias",
+      "id": 3
+    },
+    {
+      "firstName": "omari",
       "lastName": "nutsubidze",
       "gender": "men",
-      "pId": 60001152305,
-      "mobNum": 598480484,
-      "legalAddress": null,
-      "actualAddress": null
+      "mobNum": 598480481,
+      "pId": 60001152204,
+      "legalAddressCountry": "avstria",
+      "legalAddressCity": "tbilisi",
+      "legalAddressAddress": "chavchavadze",
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "tbilisi",
+      "actualAddressAddress": "cincadze",
+      "id": 4
+    },
+    {
+      "id": 5,
+      "firstName": "giorgi",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "pId": 60001152204,
+      "mobNum": 598480481,
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "kutasi",
+      "actualAddressaddress": "chavchavadze N22",
+      "legalAddressCountry": "georgia",
+      "legalAddressCity": "tbilisi",
+      "legalAddressaddress": "cincadze N22"
+    },
+    {
+      "firstName": "vanda",
+      "lastName": "bodokia",
+      "gender": "women",
+      "mobNum": "598480481",
+      "pId": "60001152205",
+      "legalAddressCountry": "parizi",
+      "legalAddressCity": "kutaisi",
+      "legalAddressAddress": "diasjdias",
+      "actualAddressCountry": "avstria",
+      "actualAddressCity": "kutaisi",
+      "actualAddressAddress": "diasjdias",
+      "id": 6
+    },
+    {
+      "firstName": "omari",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "mobNum": 598480481,
+      "pId": 60001152204,
+      "legalAddressCountry": "avstria",
+      "legalAddressCity": "tbilisi",
+      "legalAddressAddress": "chavchavadze",
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "tbilisi",
+      "actualAddressAddress": "cincadze",
+      "id": 7
+    },
+    {
+      "id": 8,
+      "firstName": "giorgi",
+      "lastName": "nutsubidze",
+      "gender": "men",
+      "pId": 60001152204,
+      "mobNum": 598480481,
+      "actualAddressCountry": "georgia",
+      "actualAddressCity": "kutasi",
+      "actualAddressaddress": "chavchavadze N22",
+      "legalAddressCountry": "georgia",
+      "legalAddressCity": "tbilisi",
+      "legalAddressaddress": "cincadze N22"
+    },
+    {
+      "firstName": "vanda",
+      "lastName": "bodokia",
+      "gender": "women",
+      "mobNum": "598480481",
+      "pId": "60001152205",
+      "legalAddressCountry": "parizi",
+      "legalAddressCity": "kutaisi",
+      "legalAddressAddress": "diasjdias",
+      "actualAddressCountry": "avstria",
+      "actualAddressCity": "kutaisi",
+      "actualAddressAddress": "diasjdias",
+      "id": 9
+    }
+  ],
+  "Accounts": [
+    {
+      "id": 1,
+      "uId": 1,
+      "accountType": [
+        "Current"
+      ],
+      "currency": [
+        "GEL",
+        "USD"
+      ],
+      "accountStatus": [
+        "Active"
+      ]
+    },
+    {
+      "id": 2,
+      "uId": 2,
+      "accountType": [
+        "Savings"
+      ],
+      "currency": [
+        "GEL",
+        "USD",
+        "EUR"
+      ],
+      "accountStatus": [
+        "Active"
+      ]
+    },
+    {
+      "id": 3,
+      "uId": 3,
+      "accountType": [
+        "Accumulator"
+      ],
+      "currency": [
+        "GEL",
+        "USD",
+        "EUR",
+        "RUB"
+      ],
+      "accountStatus": [
+        "Closed"
+      ]
+    },
+    {
+      "accountType": "Savings",
+      "currency": "GEL",
+      "accountStatus": "Active",
+      "id": 4
+    },
+    {
+      "uId": "1",
+      "accountType": "",
+      "currency": "",
+      "accountStatus": "",
+      "id": 5
     }
   ]
 }

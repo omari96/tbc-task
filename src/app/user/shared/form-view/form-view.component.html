@@ -1,0 +1,125 @@
+<form [formGroup]="formGroup">
+  <label class="my-3">firstName</label>
+  <input type="text" placeholder="Enter firstName" formControlName="firstName" required
+    pattern="[a-zA-Z ]*">
+  <ng-container *ngIf="formGroup.controls.firstName.dirty">
+    <span class="text-danger" *ngIf="formGroup.controls.firstName.invalid">სიმბოლოები უნდა
+      შეიცავდეს მხოლოდ
+      ლათინურ ასოებს და რაოდენობა სავალდებულოა რომ იყოს მინიმუმ 2 და მაქსიმუმ 50
+      სიმბოლო</span>
+  </ng-container>
+
+  <label>lastName</label>
+  <input type="text" placeholder="Enter lastName" formControlName="lastName" required
+    pattern="[a-zA-Z ]*">
+
+  <ng-container *ngIf="formGroup.controls.lastName.dirty">
+    <span class="text-danger" *ngIf="formGroup.controls.lastName.invalid">სიმბოლოები
+      უნდა შეიცავდეს მხოლოდ
+      ლათინურ ასოებს და რაოდენობა სავალდებულოა რომ იყოს მინიმუმ 2 და მაქსიმუმ 50
+      სიმბოლო</span>
+  </ng-container>
+
+  <label>gender</label>
+  <div class="checkbox-cont">
+    <div class="checkbox" *ngFor="let gender of genders">
+      <label>{{gender}}</label>
+      <input class="radio-input" type="radio" formControlName="gender" [value]="gender">
+    </div>
+  </div>
+
+  <label>pId</label>
+  <input type="text" placeholder="Enter pid" formControlName="pId" required>
+  <ng-container *ngIf="formGroup.controls.pId.dirty">
+    <span class="text-danger" *ngIf="formGroup.controls.pId?.errors?.pattern">
+      სავალდებულოა 11 ციფრი
+    </span>
+    <span class="text-danger" *ngIf="formGroup.controls.pId?.errors?.required">
+      პირადი ნომრის შევსება სავალდებულოა
+    </span>
+  </ng-container>
+
+  <label>mobNum</label>
+  <input type="text" placeholder="Enter mobNum" formControlName="mobNum" required>
+
+  <ng-container *ngIf="formGroup.controls.mobNum.dirty">
+    <span class="text-danger" *ngIf="formGroup.controls.mobNum?.errors?.pattern">
+      სავალდებულოა 9 ციფრი
+    </span>
+    <span class="text-danger" *ngIf="formGroup.controls.mobNum?.errors?.required">
+      მობილურის ნომრის შევსება სავალდებულოა
+    </span>
+  </ng-container>
+
+  <div class="legal-address">
+    <span class="my-3">Legal Address</span>
+    <label>country</label>
+    <input type="text" placeholder="Enter country" formControlName="legalAddressCountry"
+      required>
+    <ng-container *ngIf="formGroup.controls.legalAddressCountry.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.legalAddressCountry?.errors?.required">
+        ქვეყნის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+
+    <label>city</label>
+    <input type="text" placeholder="Enter city" formControlName="legalAddressCity"
+      required>
+
+    <ng-container *ngIf="formGroup.controls.legalAddressCity.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.legalAddressCity?.errors?.required">
+        ქალაქის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+
+    <label>address</label>
+    <input type="text" placeholder="Enter address" formControlName="legalAddressAddress"
+      required>
+
+    <ng-container *ngIf="formGroup.controls.legalAddressAddress.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.legalAddressAddress?.errors?.required">
+        მისამართის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+  </div>
+
+  <div class="actual-address my-3">
+    <span class="my-3">Actual Address</span>
+    <label>country</label>
+    <input type="text" placeholder="Enter country" formControlName="actualAddressCountry"
+      required>
+
+    <ng-container *ngIf="formGroup.controls.actualAddressCountry.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.actualAddressCountry?.errors?.required">
+        ქვეყნის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+
+    <label>city</label>
+    <input type="text" placeholder="Enter city" formControlName="actualAddressCity"
+      required>
+
+    <ng-container *ngIf="formGroup.controls.actualAddressCity.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.actualAddressCity?.errors?.required">
+        ქალაქის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+
+    <label>address</label>
+    <input type="text" placeholder="Enter address" formControlName="actualAddressAddress"
+      required>
+
+    <ng-container *ngIf="formGroup.controls.actualAddressAddress.dirty">
+      <span class="text-danger"
+        *ngIf="formGroup.controls.actualAddressAddress?.errors?.required">
+        მისამართის შევსება სავალდებულოა
+      </span>
+    </ng-container>
+  </div>
+
+</form>

@@ -1,48 +1,6 @@
 <main>
   <div class="container ">
-    <form [formGroup]="userForm">
-      <label class="my-3">name</label>
-      <input type="text" placeholder="Enter name" formControlName="name" required
-        pattern="[a-zA-Z ]*">
-
-      <label>lastName</label>
-      <input type="text" placeholder="Enter lastName" formControlName="lastName" required
-        pattern="[a-zA-Z ]*">
-
-      <label>gender</label>
-      <input type="text" placeholder="Enter gender" formControlName="gender" required>
-
-      <label>pid</label>
-      <input type="text" placeholder="Enter pid" formControlName="pid" required>
-
-      <label>mobNum</label>
-      <input type="text" placeholder="Enter mobNum" formControlName="mobNum" required>
-
-      <div class="legal-address">
-        <span class="my-3">Legal Address</span>
-        <label>country</label>
-        <input type="text" placeholder="Enter country" formControlName="country" required>
-
-        <label>city</label>
-        <input type="text" placeholder="Enter city" formControlName="city" required>
-
-        <label>address</label>
-        <input type="text" placeholder="Enter address" formControlName="address" required>
-      </div>
-
-      <div class="actual-address my-3">
-        <span class="my-3">Actual Address</span>
-        <label>country</label>
-        <input type="text" placeholder="Enter country" formControlName="country" required>
-
-        <label>city</label>
-        <input type="text" placeholder="Enter city" formControlName="city" required>
-
-        <label>address</label>
-        <input type="text" placeholder="Enter address" formControlName="address" required>
-      </div>
-    </form>
-    <button type="button" class="btn btn-primary m-3" (click)='addUser()'>Add User</button>
+    <app-form-view [formGroup]="formGroup"></app-form-view>
+    <button type="button" class="btn btn-primary m-3" (click)='addUser()'  [disabled]="formGroup.invalid">Add User</button>
   </div>
-
 </main>

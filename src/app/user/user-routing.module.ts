@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
+import { AccountAddComponent } from './account-add/account-add.component';
+import { AccountEditComponent } from './account-edit/account-edit.component';
 import { AddUserComponent } from './add-user/add-user.component';
+import { EditUserComponent } from './edit-user/edit-user.component';
 import { UserListComponent } from './user-list/user-list.component';
 
 export const routes: Route[] = [
@@ -16,6 +19,18 @@ export const routes: Route[] = [
   {
     path: 'user/add',
     component: AddUserComponent,
+  },
+  {
+    path: 'user/detail/:id',
+    component: EditUserComponent,
+  },
+  {
+    path: 'user/detail/:id/accountDetail/:id',
+    component: AccountEditComponent,
+  },
+  {
+    path: 'user/detail/:id/accountAdd/:id',
+    component: AccountAddComponent,
   },
 ];
 

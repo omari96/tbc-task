@@ -1,0 +1,55 @@
+<main>
+  <div class="container ">
+    <form [formGroup]="accountForm">
+      <div class="input-cont">
+        <label class="my-3">uId</label>
+        <input type="text" placeholder="Enter uId" formControlName="uId" required>
+      </div>
+
+      <div class="row mb-3">
+        <label for="accountType" class="col-sm-2 col-form-label">accountType</label>
+        <div class="col-sm-10">
+          <select formControlName="accountType" class="form-select">
+            <option [value]="null" hidden>Select AccountType</option>
+            <option *ngFor="let accountType of accountTypeOptions" required>
+              {{accountType}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="currency" class="col-sm-2 col-form-label">currency</label>
+        <div class="col-sm-10">
+          <select formControlName="currency" class="form-select">
+            <option [value]="null" hidden>Select Currency</option>
+            <option *ngFor="let currency of currencyOptions" required>{{currency}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row mb-3">
+        <label for="accountStatus" class="col-sm-2 col-form-label">accountStatus</label>
+        <div class="col-sm-10">
+          <select formControlName="accountStatus" class="form-select">
+            <option [value]="null" hidden>Select AccountStatus</option>
+            <option *ngFor="let accountStatus of accountStatusOptions" required>
+              {{accountStatus}}
+            </option>
+          </select>
+        </div>
+      </div>
+
+    </form>
+    <div class="cont">
+      <button type="button" class="btn btn-primary m-3" (click)='addAccount()'
+      [disabled]="accountForm.invalid">Add User</button>
+      <ng-container *ngIf="accountForm.invalid">
+        <span class="text-danger">
+          ყველა ველის შევსება სავალდებულოა
+        </span>
+      </ng-container>
+    </div>
+  </div>
+</main>

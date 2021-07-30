@@ -1,0 +1,10 @@
+<main>
+  <div class="container ">
+    <app-form-view [formGroup]="formGroup" *ngIf="formGroup"></app-form-view>
+    <button type="button" class="btn btn-primary m-3"
+      [routerLink]="['accountAdd', id]">add account</button>
+    <app-account-list></app-account-list>
+    <button type="button" class="btn btn-primary m-3"
+      (click)='UpdateUser()' [disabled]="formGroup.invalid">update</button>
+  </div>
+</main>

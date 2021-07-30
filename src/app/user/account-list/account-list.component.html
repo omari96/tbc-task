@@ -1,0 +1,26 @@
+<section>
+  <div class="container">
+    <table class="table ">
+      <thead>
+        <tr>
+          <th>uId</th>
+          <th>accountType</th>
+          <th>currency</th>
+          <th>accountStatus</th>
+          <th>action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let account of accountData" [routerLink]="['accountDetail', account.id]">
+          <td>{{account.uId}}</td>
+          <td>{{account.accountType}}</td>
+          <td>{{account.currency}}</td>
+          <td>{{account.accountStatus}}</td>
+          <td class="action">
+            <span  (click)="deleteAccount(account); $event.stopPropagation();">delete</span>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

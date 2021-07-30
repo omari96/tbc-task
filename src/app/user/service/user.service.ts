@@ -19,8 +19,15 @@ export class UserService {
     return this.http.post(`${this.url}`, user)
   }
 
+  getCurrentData(id: number) {
+    return this.http.get(`${this.url}` + `${id}`)
+  }
+  updateData(id: number, data: User) {
+    return this.http.put(`${this.url}` + `${id}`, data)
+  }
+
   deleteUser(user: User) {
-    return this.http.delete(`${this.url}${user.uId}`)
+    return this.http.delete(`${this.url}/${user.id}`)
   }
 
 }

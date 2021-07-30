@@ -1,0 +1,80 @@
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 50px;
+  font-weight: bold;
+  font-size: 20px;
+
+  .checkbox-cont {
+    display: flex;
+    margin: 20px 0;
+    .checkbox {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 10px;
+        max-width: 180px;
+        .radio-input {
+            width: 20px;
+            height: 20px;
+        }
+    }
+}
+
+  label {
+    color: black;
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  input {
+    width: 100%;
+    min-width: 150px;
+    max-width: 800px;
+    height: 50px;
+    border: none;
+    outline: none;
+    background-color: white;
+    font-size: 15px;
+    color: black;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    padding-left: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+    &.has-error {
+      border: 1px solid red;
+    }
+  }
+  span {
+    font-size: 15px;
+    margin-bottom: 15px;
+    max-width: 800px;
+  }
+
+  .legal-address {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+  .actual-address {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    padding: 0 30px;
+    font-weight: bold;
+    font-size: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.12);
+  }
+
+  input.ng-invalid {
+    border-left: 1px solid red;
+  }
+  input.ng-valid {
+    border-left: 5px solid green;
+  }
+}

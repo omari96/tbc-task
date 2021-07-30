@@ -1,24 +1,15 @@
 
 export interface User {
-  uId: number,
-  name: string,
+  id: number,
+  firstName: string,
   lastName: string,
-  gender: string,
+  gender: 'women' | 'men',
   pId: number,
   mobNum: number,
-  legalAddress: LegalAddress,
-  actualAddress: ActualAddress,
+  legalAddressCountry:string,
+  legalAddressCity: string;
+  legalAddressAddress: string;
+  actualAddressCountry:string,
+  actualAddressCity: string;
+  actualAddressAddress: string;
 }
-
-export interface LegalAddress{
-  legalCountry: string,
-  legalCity:string,
-  legalAddress: string,
-}
-
-export interface ActualAddress{
-  actualCountry: string,
-  actualCity:string,
-  actualAddress: string
-}
-

@@ -1,14 +1,18 @@
 <section>
 
   <div class="container">
+    <nav class="navbar">
+      <input type="text" class="form-control" name="firstName" [(ngModel)]="firstName"
+        (ngModelChange)="search()" placeholder="Enter FirstName to search">
+    </nav>
+
     <button type="button" class="btn btn-primary m-3" routerLink="add">Add User</button>
 
-    <table class="table table-bordered">
+    <table class="table ">
       <thead>
         <tr>
-          <th>uId</th>
-          <th>name</th>
-          <th>lastName</th>
+          <th (click)="sort('id')">firstName&nbsp;<i class=" fa fa-sort"></i></th>
+          <th (click)="sort('lastName')">lastName&nbsp;<i class=" fa fa-sort"></i></th>
           <th>gender</th>
           <th>pId</th>
           <th>mobNum</th>
@@ -17,20 +21,22 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of userData">
-          <td>{{user.uId}}</td>
-          <td>{{user.name}}</td>
+        <tr
+          *ngFor="let user of userData | orderBy: key : reverse | paginate: { itemsPerPage: 5, currentPage: p }"
+          [routerLink]=" ['detail', user.id]">
+          <td>{{user.firstName}}</td>
           <td>{{user.lastName}}</td>
           <td>{{user.gender}}</td>
           <td>{{user.pId}}</td>
           <td>{{user.mobNum}}</td>
-          <td>{{user.actualAddress}}</td>
+          <td>{{user.actualAddressCountry}}, {{user.actualAddressCity}}</td>
           <td class="action">
             <span class="mx-2">edit</span>
-            <span (click)="deleteUser(user)">delete</span>
+            <span (click)="deleteUser(user); $event.stopPropagation();">delete</span>
           </td>
         </tr>
       </tbody>
+      <pagination-controls (pageChange)="p = $event"></pagination-controls>
     </table>
   </div>
 
